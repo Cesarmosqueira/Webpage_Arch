@@ -12,8 +12,13 @@
         <b>Birth date::</b>
         <p><input type="date" id="birth_input" name="Birth date"
             min="1969-01-01" max="2020-12-31"></p>
+        <p><input type="button" name = "submit" id="submit" value="Submit!"/></p>
             <?php
-                if(array_key_exists('submit', $POST)){
+                if($_GET['username_input'] == "a"){
+                    echo "<h2>HELLOWORLD</h2>";
+                }
+                if(array_key_exists('submit', $_POST)){
+                    echo "<h2>HELLOWORLD</h2>";
                     $servername = "localhost";
                     $username = "osproject";
                     $password = "peterchupapinga";
@@ -44,7 +49,6 @@
                 }
             
             ?>
-        <p><button type="button" name="submit";>Register!</button></p>
       
     </body>
 </html>
