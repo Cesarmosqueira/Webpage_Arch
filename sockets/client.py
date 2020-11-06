@@ -1,8 +1,8 @@
 import socket
 
 REQ_SIZE = 64
-PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
+PORT = 80
+SERVER = "132.251.1.152" 
 ADDR = (SERVER, PORT)
 DC = "!DISCONNECT"
 

@@ -7,35 +7,11 @@
         <p><input type="text" name = "Username" placeholder="Username" id="username_input"></p>
         <b>Email:</b>
         <p><input type="text" name = "Email" placeholder="Email" id="email_input"></p>
-        <b>Birth date:</b>
+        <b>Birth date::</b>
         <p><input type="date" id="birth_input" name="Birthdate"
             min="1969-01-01" max="2020-12-31"></p>
-        <button type = "submit" onclick="show_alert();">Submit!</button>
+        <button type = "submit">Submit!</button>
         </form>
-        <script>    
-            function show_alert(){
-                var mail = document.getElementById("email_input").value;
-                alert(mail);
-            }
-            const form = document.getElementById("theform");
-            form.addEventListener("submit", function(e){
-                e.preventDefault();
-
-                const formData = new FormData(this);
-                fetch("submit.php", {                        
-                    method: 'post',
-                    body: formData
-                }).then(function(response){
-                    return response.text;
-                }).then(function(text){                        
-                    console.log(text);
-                }).catch(function(error){
-                    console.error(error);
-                })
-            });
-                        
-        </script>
-
     </body>
 </html>
 
