@@ -17,5 +17,5 @@ else {
 	$insertar= "INSERT INTO Users (Username, Email, Birthdate) VALUES ('$Username','$Email','$Birthdate')";
 	$query= mysqli_query($conexion,$insertar);
 }
-           
+ die()          
 ?>
