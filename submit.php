@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $basededatos = "vgames";
 $usuario = "osproject";
-$password = "peterchupapinga";
+$password = "1234";
 
 $conexion = mysqli_connect($servidor, $usuario, $password, $basededatos);
 
