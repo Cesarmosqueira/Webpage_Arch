@@ -8,9 +8,9 @@ $conexion = mysqli_connect($servidor, $usuario, $password, $basededatos);
 
 // establecer y realizar consulta. guardamos en variable.
 $consulta = "SELECT * FROM Users";
-$resultado = mysqli_query($conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
+$resultado = mysqli_query($conexion, $consulta ) or die ( "Error consultando DB");
 // Encabezado de la tabla
-echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
+echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";A
 	echo "<tr>";
 		echo "<th>Username</th>";
 		echo "<th>Email</th>";

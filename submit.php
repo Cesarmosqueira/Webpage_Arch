@@ -1,5 +1,4 @@
-<META HTTP-EQUIV="REFRESH" CONTENT="5; URL=http://localhost/Ejemplo1_BD/Ejemplo1_BD.html">
-
+<META HTTP-EQUIV="REFRESH" CONTENT="2; URL=http://localhost/index.html">
 <?php
 $servidor = "localhost";
 $basededatos = "vgames";
