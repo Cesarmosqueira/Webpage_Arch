@@ -13,29 +13,9 @@
         <button type = "submit">Submit!</button>
         </form>
         <br>
-        <?php
-            $conn = mysqli_connect("localhost", "osproject", "1234", "vgames");
-            if ($conn-> connect_error) {
-                die("Couldn't connect: ".$conn->connect_error);
-            }
-            $sql = "SELECT Username, Email, Birthdate from Users";
-            $result = $conn-> query($sql);
-
-            if ($result-> num_rows > 0){
-                while($row = $result->fetch_assoc()){
-                        echo "<tr>";
-                        echo    "<td>".$row["Username"]. "</td>";
-                        echo    "<td>".$row["Email"] . "</td>";
-                        echo    "<td>".$row["Birthdate"] . "</td>";
-                        echo "</tr>";
-                }
-                echo "</table>"
-            }
-            else {
-                echo "Emtpy";
-            }
-            $conn-> close();
-        ?>
+        <form method="post" action="display.php">
+            <button type="submit">Show users</button>
+        </form>
     </body>
 </html>
 

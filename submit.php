@@ -17,5 +17,6 @@ else {
 	$query= mysqli_query($conexion,$insertar);
 }
 	header('Location: index.html');
-	die()          
+    die();
+    conexion->close();
 ?>
