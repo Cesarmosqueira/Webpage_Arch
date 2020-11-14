@@ -12,19 +12,21 @@
     <?php
     echo '<div id="main_feed">';
         $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
-        $query = "SELECT * FROM Comment";
+        $query = "SELECT * FROM News ORDER BY code_index";
         $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
         echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
             echo "<tr>";
-                echo "<th>Content</th>";
-                echo "<th>User </th>";
-                echo "<th>Date</th>";
+                echo "<th>Index</th>";
+                echo "<th>Content </th>";
+                echo "<th>Likes</th>";
+                echo "<th>Comments</th>";
             echo "</tr>";
             while($col = mysqli_fetch_array($cons)){
                 echo "<tr>";
-                echo "<td align='center' bgcolor='white'>" .$col['user']."</td>";
-                echo "<td align='center' bgcolor='white'>" .$col['date']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['code_index']."</td>";
                 echo "<td align='center' bgcolor='white'>" .$col['content']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['likes']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['comments']."</td>";
                 echo "</tr>";
             }
         echo "</table>";
