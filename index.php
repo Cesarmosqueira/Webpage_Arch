@@ -30,7 +30,7 @@
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
                 echo "<br>";
-                echo '<form id="likes" action="plike.php" method="post">';
+                echo '<form id="likes" action="phpfiles/plike.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                 echo '</form>';
