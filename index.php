@@ -10,16 +10,18 @@
         </ul>
     </div>
     <?php
+    echo "<br>";
     echo '<div id="main_feed">';
         $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
         $query = "SELECT * FROM News ORDER BY code_index";
         $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
-        echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
+        echo "<table width='35%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
             echo "<tr>";
                 echo "<th>Index</th>";
                 echo "<th>Content </th>";
                 echo "<th>Likes</th>";
                 echo "<th>Comments</th>";
+                echo "<th>Date</th>";
             echo "</tr>";
             while($col = mysqli_fetch_array($cons)){
                 echo "<tr>";
@@ -27,6 +29,7 @@
                 echo "<td align='center' bgcolor='white'>" .$col['content']."</td>";
                 echo "<td align='center' bgcolor='white'>" .$col['likes']."</td>";
                 echo "<td align='center' bgcolor='white'>" .$col['comments']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['date']."</td>";
                 echo "</tr>";
             }
         echo "</table>";
