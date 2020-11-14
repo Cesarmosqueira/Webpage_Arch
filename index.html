@@ -14,8 +14,7 @@
         <button onclick="append()">append a comment field</button>
         <script>
             function append(){
-                var P = document.createElement("p");
-                var node = document.createTextNode(`
+                    document.getElementById("main_feed").innerHTML += `
                     <div id="respond">
                     <h3>Leave a Comment</h3>
                     <form action="post_comment.php" method="post" id="commentform">
@@ -33,10 +32,7 @@
                     <input name="submit" type="submit" value="Submit comment" />
                     </form>
                     </div>;
-                `)
-                P.appendChild(node);
-                var element = document.getElementById("main_feed");
-                element.appendChild(P);
+                `;
             }
         </script>
     </body>
