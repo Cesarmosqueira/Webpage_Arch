@@ -22,6 +22,12 @@
 }
 body {background-color: #d4d1cb;}
 
+.loginfield {
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .card {
     background-color: #aba1a1;
@@ -36,4 +42,3 @@ body {background-color: #d4d1cb;}
     margin: auto;
     padding: 10px;
 }
-

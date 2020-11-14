@@ -9,6 +9,12 @@
             <li><a href="index.html">Mas</a></li>
         </ul>
     </div>
+    <div class='loginfield'>
+        <h3>Selenita<h3>
+        <form method="post" action="">
+            <input type="submit" value="log out">
+        </form>
+    </div>
     <?php
     echo '<link rel="stylesheet" href="main.css">';
     echo '<div id="main_feed">';
