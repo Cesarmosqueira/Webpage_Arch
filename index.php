@@ -10,12 +10,22 @@
         </ul>
     </div>
     <?php
-    $html = '
-        <div id="main_feed">
-            <h1>Idk</h1>
-            </div>
-    ';
-    echo $html;
+    echo '<div id="main_feed">';
+        $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
+        $query = "SELECT * FROM Comment";
+        $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
+        echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
+        while($col = mysqli_fetch_array($cons)){
+            echo "<tr>";
+            echo "<td align='center' bgcolor='white'>" .$columna['user']."</td>";
+            echo "<td align='center' bgcolor='white'>" .$columna['date']."</td>";
+            echo "<td align='center' bgcolor='white'>" .$columna['content']."</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    echo '</div>';
+    mysqli_close( $sqlconn );
+
     ?>
     <body>
         <button onclick="append()">append a comment field</button>
