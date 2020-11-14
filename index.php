@@ -9,7 +9,12 @@
             <li><a href="index.html">Mas</a></li>
         </ul>
     </div>
-    <div id="main_feed"></div>
+    <?php
+    echo "<div id="main_feed">
+            <h1>Idk</h1>
+            </div>
+    "
+    ?>
     <body>
         <button onclick="append()">append a comment field</button>
         <script>
