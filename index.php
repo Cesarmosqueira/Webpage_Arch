@@ -15,13 +15,18 @@
         $query = "SELECT * FROM Comment";
         $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
         echo "<table width='20%' aling='center' cellpadding='6' cellspacing='0' bgcolor='skyblue' border='1' >";
-        while($col = mysqli_fetch_array($cons)){
             echo "<tr>";
-            echo "<td align='center' bgcolor='white'>" .$columna['user']."</td>";
-            echo "<td align='center' bgcolor='white'>" .$columna['date']."</td>";
-            echo "<td align='center' bgcolor='white'>" .$columna['content']."</td>";
+                echo "<th>Content</th>";
+                echo "<th>User </th>";
+                echo "<th>Date</th>";
             echo "</tr>";
-        }
+            while($col = mysqli_fetch_array($cons)){
+                echo "<tr>";
+                echo "<td align='center' bgcolor='white'>" .$col['user']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['date']."</td>";
+                echo "<td align='center' bgcolor='white'>" .$col['content']."</td>";
+                echo "</tr>";
+            }
         echo "</table>";
     echo '</div>';
     mysqli_close( $sqlconn );
