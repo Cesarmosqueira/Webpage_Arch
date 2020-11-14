@@ -1,0 +1,29 @@
+.menu ul{
+    padding: 0px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b3afa8;
+}
+.menu li{
+    float: left;
+}   
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background-color: #bfbbb2;
+}
+body {background-color: #d4d1cb;}
+.lbody q{
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+}
+
+

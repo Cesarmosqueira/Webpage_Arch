@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html> 
-    <h1>Register:</h1>
+    <link rel="stylesheet" href="main.css">
+    <div class ="menu">
+        <h1><a href="index.html">Newsletter videogames</a></h1>
+        <ul>
+            <li><a href="index.html">Noticias</a></li>
+            <li><a href="index.html">Reviews</a></li>
+            <li><a href="index.html">Mas</a></li>
+        </ul>
+    </div>
     <body>
-        <form id = "theform" class ="form" action = "submit.php" method ="post" >
-        <b>Username:</b>
-        <p><input type="text" name = "Username" placeholder="Username" id="username_input"></p>
-        <b>Email:</b>
-        <p><input type="text" name = "Email" placeholder="Email" id="email_input"></p>
-        <b>Birth date:</b>
-        <p><input type="date" id="birth_input" name="Birthdate"
-            min="1969-01-01" max="2020-12-31"></p>
-        <button type = "submit">Submit!</button>
-        </form>
-        <br>
-        <form method="post" action="display.php">
-            <button type="submit">Show users</button>
-        </form>
+        <div id="respond">
+
+            <h3>Leave a Comment</h3>
+          
+            <form action="post_comment.php" method="post" id="commentform">
+          
+              <label for="comment_author" class="required">Your name</label>
+              <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+          
+              <label for="email" class="required">Your email;</label>
+              <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+          
+              <label for="comment" class="required">Your message</label>
+              <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
+          
+              <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+              <input name="submit" type="submit" value="Submit comment" />
+          
+            </form>
+          
+          </div>
     </body>
 </html>
 
