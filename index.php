@@ -31,7 +31,7 @@
                     <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
                     <input name="submit" type="submit" value="Submit comment" />
                     </form>
-                    </div>;
+                    </div>
                 `;
             }
         </script>
