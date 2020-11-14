@@ -28,7 +28,7 @@
                 echo "</tr>";
             }
         echo "</table>";
-    echo '</div>';
+    echo '</div><br>';
     mysqli_close( $sqlconn );
 
     ?>
