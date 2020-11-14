@@ -10,10 +10,12 @@
         </ul>
     </div>
     <?php
-    echo "<div id="main_feed">
+    $html = '
+        <div id="main_feed">
             <h1>Idk</h1>
             </div>
-    "
+    ';
+    echo $html;
     ?>
     <body>
         <button onclick="append()">append a comment field</button>
