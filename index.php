@@ -10,13 +10,13 @@
         </ul>
     </div>
     <?php
-    echo "<br>";
+    echo '<link rel="stylesheet" href="main.css">';
     echo '<div id="main_feed">';
         $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
         $query = "SELECT * FROM News ORDER BY code_index";
         $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
         while($col = mysqli_fetch_array($cons)){
-            echo "<div class='card'>";
+            echo "<br><div class='card'>";
             echo "<div class ='postheader'>";
                 echo "<h2>" .$col["title"]."</h2>";
                 echo "<h5>" .$col["description"]. "<br>" .$col["date"]. "</h5>";
@@ -24,7 +24,7 @@
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
                 echo "<br>";
-                echo "Number of likes: " .$col["likes"]. "<br>";
+                echo '<input type="button" value="Like='.$col["likes"].'">';
                 echo "Number of comments: " .$col["comments"]. "<br>";
             echo "</div>";
             echo "</div>";

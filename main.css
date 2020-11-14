@@ -21,9 +21,20 @@
     background-color: #bfbbb2;
 }
 body {background-color: #d4d1cb;}
-.lbody q{
-    color: white;
-    font-family: "Times New Roman", Times, serif;
-}
 
+
+.card {
+    background-color: #aba1a1;
+    overflow: auto;
+}
+.card img{
+    float: left;
+}
+.postcontent {
+    background-color: #695b5a;
+    overflow: auto ;
+    margin: auto;
+    padding: 10px;
+    
+}
 
