@@ -24,14 +24,10 @@
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
                 echo "<br>";
-                echo '<form id="likes" action="plike.php" method="post">'
-                    echo '<input type="hidden" id="current" value="' .$col["likes"]. '">';
+                echo '<form id="likes" action="plike.php" method="post">';
+                    echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
-                echo '</form>'
-                echo '<form id="comment" action="comment.php" method="post">'
-                    //echo "Number of comments: " .$col["comments"]. "<br>";
-                    echo '<button type="submit"> Comment='.$col["comments"].'</button>';
-                echo '</form>'
+                echo '</form>';
             echo "</div>";
             echo "</div>";
         }
