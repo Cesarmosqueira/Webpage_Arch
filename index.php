@@ -20,14 +20,14 @@
             echo "<div class ='postheader'>";
                 echo "<h2>" .$col["title"]."</h2>";
                 echo "<h5>" .$col["description"]. "<br>" .$col["date"]. "</h5>";
-                echo '<img src="'.$col["picture"].'" width="300" height="300">';
+                echo '<img src="'.$col["picture"].'" width="100" height="100">';
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
                 echo "<br>";
                 echo "Number of likes: " .$col["likes"]. "<br>";
                 echo "Number of comments: " .$col["comments"]. "<br>";
             echo "</div>";
-            echo "</div>"
+            echo "</div>";
         }
     echo '</div><br>';
     mysqli_close( $sqlconn );
