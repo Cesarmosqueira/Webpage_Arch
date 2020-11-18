@@ -32,10 +32,10 @@
                 echo '<img src="'.$col["picture"].'" width="100" height="100">';
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
-                echo "<br>";
+                echo "<br><br>";
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
-                    echo '<input type="text" id="comment" name="comment"><br>' 
-                    echo '<input type="submit" value="Send!">'
+                    echo '<input type="text" id="comment" name="comment">  ';
+                    echo '<input type="submit" value="Send!">';
                 echo '</form>';
                 echo '<form id="likes" action="phpfiles/plike.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
