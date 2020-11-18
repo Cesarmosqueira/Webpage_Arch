@@ -38,6 +38,7 @@
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                 echo '</form>';
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
+                    echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<input type="text" id="comment" name="comment">  ';
                     echo '<input type="submit" value="Send!">';
                 echo '</form>';
