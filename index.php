@@ -37,8 +37,9 @@
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                     echo '</form>';
                     echo '<br>';
-                echo '<div class="allcoments">';
+            echo "</div><div class='allcomments'>";
                 $cons_Comment = mysqli_query($sqlconn, $query_Comment) or die ( "WTF!" );
+                echo "<br>";
                 while($comment=mysqli_fetch_array($cons_Comment )){
                     if($comment["code_index"] == $col["code_index"]){
                         echo '<div class="singlecomment">';
@@ -53,7 +54,6 @@
                     echo '<input type="text" id="comment" name="comment">  ';
                     echo '<input type="submit" value="Send!">';
                 echo '</form>';
-            echo "</div>";
             echo "</div>";
         }
     echo '</div><br>';

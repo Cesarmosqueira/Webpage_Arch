@@ -36,6 +36,18 @@ body {background-color: #d4d1cb;}
 .card img{
     float: left;
 }
+.allcomments{
+    color:red;
+
+    background-color: #f2d680;
+    overflow: auto ;
+    margin: auto;
+    padding: 10px;
+}
+.singlecomment{
+    color:red;
+    padding: 10px solid #000;
+}
 .postcontent {
     background-color: #918584;
     overflow: auto ;
