@@ -24,7 +24,7 @@
         $query_Comment = "SELECT * FROM Comment ORDER BY code_index";
 
         while($col = mysqli_fetch_array($cons_News)){
-            echo "<br><div class='card'>";
+        echo "<br><div class='card'>";
             echo "<div class ='postheader'>";
                 echo "<h2>" .$col["title"]. " - " .$col["code_index"]."</h2>";
                 echo "<h5>" .$col["description"]. "<br>" .$col["date"]. "</h5>";
@@ -48,13 +48,13 @@
                         echo '</div>';
                     }
                 }
-                echo '</div>';
+            echo '</div>';
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<input type="text" id="comment" name="comment">  ';
                     echo '<input type="submit" value="Send!">';
                 echo '</form>';
-            echo "</div>";
+        echo "</div>";
         }
     echo '</div><br>';
     mysqli_close( $sqlconn );
