@@ -38,11 +38,15 @@
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                     echo '</form>';
                     echo '<br>';
+                echo '<div class="allcoments">';
                 while($comment=mysqli_fetch_array($cons_Comment )){
-                    echo '<div class="Comment field">';
-                        echo 'comment';
-                    echo '</div>';
+                    if($comment["code_index"] == $col["code_index"]){
+                        echo '<div class="singlecomment">';
+                            echo 'comment';
+                        echo '</div>';
+                    }
                 }
+                echo '</div>';
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<input type="text" id="comment" name="comment">  ';
