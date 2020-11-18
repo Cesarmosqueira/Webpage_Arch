@@ -22,12 +22,11 @@
         $query_News = "SELECT * FROM News ORDER BY code_index";
         $cons_News = mysqli_query($sqlconn, $query_News) or die ( "WTF!" );
         $query_Comment = "SELECT * FROM Comment ORDER BY code_index";
-        $cons_Comment = mysqli_query($sqlconn, $query_Comment) or die ( "WTF!" );
 
         while($col = mysqli_fetch_array($cons_News)){
             echo "<br><div class='card'>";
             echo "<div class ='postheader'>";
-                echo "<h2>" .$col["title"]."</h2>";
+                echo "<h2>" .$col["title"]. " - " .$col["code_index"]."</h2>";
                 echo "<h5>" .$col["description"]. "<br>" .$col["date"]. "</h5>";
                 echo '<img src="'.$col["picture"].'" width="100" height="100">';
             echo "</div><div class ='postcontent'>";
@@ -39,10 +38,12 @@
                     echo '</form>';
                     echo '<br>';
                 echo '<div class="allcoments">';
+                $cons_Comment = mysqli_query($sqlconn, $query_Comment) or die ( "WTF!" );
                 while($comment=mysqli_fetch_array($cons_Comment )){
                     if($comment["code_index"] == $col["code_index"]){
                         echo '<div class="singlecomment">';
-                            echo 'comment';
+                            echo $comment["user"]. " says-> " .$comment["content"]. "<br>";
+                            echo "[" .$comment["date"]. "] (" . $comment["code_index"]. ")";
                         echo '</div>';
                     }
                 }
