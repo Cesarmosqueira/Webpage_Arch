@@ -19,9 +19,12 @@
     echo '<link rel="stylesheet" href="main.css">';
     echo '<div id="main_feed">';
         $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
-        $query = "SELECT * FROM News ORDER BY code_index";
-        $cons = mysqli_query($sqlconn, $query) or die ( "WTF!" );
-        while($col = mysqli_fetch_array($cons)){
+        $query_News = "SELECT * FROM News ORDER BY code_index";
+        $cons_News = mysqli_query($sqlconn, $query_News) or die ( "WTF!" );
+        $query_Comment = "SELECT * FROM Comment ORDER BY code_index";
+        $cons_Comment = mysqli_query($sqlconn, $query_Comment) or die ( "WTF!" );
+
+        while($col = mysqli_fetch_array($cons_News)){
             echo "<br><div class='card'>";
             echo "<div class ='postheader'>";
                 echo "<h2>" .$col["title"]."</h2>";
