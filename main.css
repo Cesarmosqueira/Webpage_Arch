@@ -37,15 +37,12 @@ body {background-color: #d4d1cb;}
     float: left;
 }
 .allcomments{
-    color:red;
-
     background-color: #f2d680;
     overflow: auto ;
     margin: auto;
     padding: 10px;
 }
 .singlecomment{
-    color:red;
     padding: 10px solid #000;
 }
 .postcontent {

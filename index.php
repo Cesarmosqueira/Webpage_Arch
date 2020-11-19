@@ -31,29 +31,30 @@
                 echo '<img src="'.$col["picture"].'" width="100" height="100">';
             echo "</div><div class ='postcontent'>";
                 echo $col["content"];
-                echo "<br><br>";
+                echo "<br>";
                 echo '<form id="likes" action="phpfiles/plike.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                     echo '</form>';
                     echo '<br>';
-            echo "</div><div class='allcomments'>";
+            echo "<div class='allcomments'>";
                 $cons_Comment = mysqli_query($sqlconn, $query_Comment) or die ( "WTF!" );
-                echo "<br>";
                 while($comment=mysqli_fetch_array($cons_Comment )){
                     if($comment["code_index"] == $col["code_index"]){
                         echo '<div class="singlecomment">';
-                            echo $comment["user"]. " says-> " .$comment["content"]. "<br>";
-                            echo "[" .$comment["date"]. "] (" . $comment["code_index"]. ")";
+                            echo '('.$comment["date"]. ') <b>'.$comment["user"]. '</b> said:<br>';
+                            echo $comment["content"];
+                            echo "<br>"; 
                         echo '</div>';
                     }
                 }
-            echo '</div>';
+                echo '<br>';
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
                     echo '<input type="text" id="comment" name="comment">  ';
                     echo '<input type="submit" value="Send!">';
                 echo '</form>';
+            echo '</div></div>';
         echo "</div>";
         }
     echo '</div><br>';
