@@ -10,12 +10,17 @@
         </ul>
     </div>
     <div class='loginfield'>
+        <?php
+            $var = 'asd';
+        ?>
+    
         <h3>Selenita<h3>
         <form method="post" action="">
             <input type="submit" value="log out">
         </form>
     </div>
     <?php
+    echo "<h4>".$var."</h4>";
     echo '<link rel="stylesheet" href="main.css">';
     echo '<div id="main_feed">';
         $sqlconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
