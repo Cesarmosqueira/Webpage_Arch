@@ -9,7 +9,7 @@
             $f = true;
         }
         if(!$f){
-            mysqli_query($sqlconn, "INSERT INTO Users VALUES(".$_POST["username"].",".$pass.")");
+            mysqli_query($sqlconn, "INSERT INTO Users VALUES('".$_POST["username"]."','".$pass."')");
             echo "inserting";
         }
         $mysqli_close($sqlconn);
