@@ -19,14 +19,14 @@
             mysqli_close($smallconn);
             echo "<br>";
             if($currentuser = mysqli_fetch_array($cons)){
-                $username = currentuser["username"];
+                $username = $currentuser["username"];
                 echo "<h3>".$username."<h3>";
                 echo '<form method="post" action="phpfiles/logout.php">';
                     echo '<input type="submit" value="log out">';
                 echo '</form>';
             }
             else{
-                echo '<form method="post" action="auxiliars/registerfield.php">';
+                echo '<form method="post" action="auxiliars/registerfield.html">';
                     echo '<input type="hidden" name="addr" value="'.$addr.'">';
                     echo '<input type="submit" value="Login here">';
                 echo '</form>';
@@ -53,6 +53,7 @@
                 echo "<br>";
                 echo '<form id="likes" action="phpfiles/plike.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
+                    echo '<input type="hidden" name="user" value="' .$username. '">';
                     echo '<button type="submit"> Like='.$col["likes"].'</button>';
                     echo '</form>';
                     echo '<br>';
@@ -70,6 +71,7 @@
                 echo '<br>';
                 echo '<form id="send_comment" action="phpfiles/send_comment.php" method="post">';
                     echo '<input type="hidden" name="current" value="' .$col["code_index"]. '">';
+                    echo '<input type="hidden" name="user" value="' .$username. '">';
                     echo '<input type="text" id="comment" name="comment">  ';
                     echo '<input type="submit" value="Send!">';
                 echo '</form>';
