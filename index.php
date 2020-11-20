@@ -26,7 +26,7 @@
                 echo '</form>';
             }
             else{
-                echo '<form method="post" action="phpfiles/login.php">';
+                echo '<form method="post" action="auxiliars/registerfield.php">';
                     echo '<input type="hidden" name="addr" value="'.$addr.'">';
                     echo '<input type="submit" value="Login here">';
                 echo '</form>';

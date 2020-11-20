@@ -1,0 +1,26 @@
+body {
+    background-color: #b3afa8;
+    zoom: 300%;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  clear: both;
+}
+
+.login {
+    background-color: #d4d1cf;
+    padding: 31.7px;
+
+
+}
+.signup{
+    background-color: #f2d680;
+    padding: 13px;
+
+}
