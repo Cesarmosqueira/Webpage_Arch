@@ -14,13 +14,13 @@
             $username = "-";
             $smallconn = mysqli_connect("localhost", "osproject",  "1234", "vgames");
             $addr = getenv("REMOTE_ADDR");
-            $q = "SELECT 1 FROM Session WHERE ip='".$addr."'";
+            $q = "SELECT * FROM Session WHERE ip='".$addr."'";
             $cons = mysqli_query($smallconn, $q);
             mysqli_close($smallconn);
             echo "<br>";
             if($currentuser = mysqli_fetch_array($cons)){
                 $username = $currentuser["username"];
-                echo "<h3>".$username."<h3>";
+                echo "<h3>".$username."</h3>";
                 echo '<form method="post" action="phpfiles/logout.php">';
                     echo '<input type="submit" value="log out">';
                 echo '</form>';
